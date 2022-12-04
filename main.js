@@ -29,5 +29,7 @@ function gotResult(error, result) {
         console.log(error)
     } else {
         console.log(result)
+        document.getElementById("object").innerHTML = "Object: " + result[0].label
+        document.getElementById("accuracy").innerHTML = "Accuracy: " + (result[0].confidence*100).toFixed(2) + "%"
     }
 }
